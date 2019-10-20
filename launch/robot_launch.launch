@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- The arguments you can pass gazebo, for example paused:=true -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="debug" default="false"/>
+  <arg name="physics" default="ode"/>
+  <arg name="verbose" default="false"/>
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <!-- The arguments you can pass spawn node, for example name:=mouse_1 -->
+  <arg name="robot_name" default="doogie"/> 
+
+  <arg name="x_origin" default="0.0"/>
+  <arg name="y_origin" default="0.0"/>
+  <arg name="z_origin" default="0.02"/>
+
+  <arg name="R_origin" default="0.0"/> 
+  <arg name="P_origin" default="0.0"/>
+  <arg name="Y_origin" default="0.0"/>
+
+  <!-- Launch gazebo world: default is empty_world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" default="$(arg paused)"/>
+    <arg name="use_sim_time" default="$(arg use_sim_time)"/>
+    <arg name="gui" default="$(arg gui)"/>
+    <arg name="debug" default="$(arg debug)"/>
+    <arg name="physics" default="$(arg physics)"/>
+    <arg name="verbose" default="$(arg verbose)"/>  
+    <arg name="world_name" default="$(arg world_name)"/>
+  </include>
+
+  <group ns="doogie">
+    <!--Note that because of 'group ns' all doogie params will be prefixed by
+    /doogie (e.g., /doogie/robot_description) -->
+
+    <include file="$(find doogie_description)/launch/robot_description.launch"/>
+
+    <node name="spawn_$(arg robot_name)" pkg="gazebo_ros" type="spawn_model" output="screen"
+      args="-urdf -param robot_description -model $(arg robot_name) -z 0.02" />
+
+    <include file="$(find doogie_control)/launch/robot_control.launch"/>
+  
+  </group>
+
+</launch>

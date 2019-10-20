@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
     <name>doogie_gazebo</name>
-    <version>0.0.0</version>
+    <version>0.7.5</version>
     <description>Provide launchfiles to use Doogie in gazebo</description>
 
     <maintainer email="caioaamaral@gmail.com">Caio Amaral</maintainer>

@@ -13,13 +13,13 @@
   <!-- The arguments you can pass spawn node, for example name:=mouse_1 -->
   <arg name="robot_name" default="doogie"/> 
 
-  <arg name="x_origin" default="0.0"/>
-  <arg name="y_origin" default="0.0"/>
-  <arg name="z_origin" default="0.02"/>
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.02"/>
 
-  <arg name="R_origin" default="0.0"/> 
-  <arg name="P_origin" default="0.0"/>
-  <arg name="Y_origin" default="0.0"/>
+  <arg name="R" default="0.0"/> 
+  <arg name="P" default="0.0"/>
+  <arg name="Y" default="0.0"/>
 
   <!-- Launch gazebo world: default is empty_world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -39,7 +39,9 @@
     <include file="$(find doogie_description)/launch/robot_description.launch"/>
 
     <node name="spawn_$(arg robot_name)" pkg="gazebo_ros" type="spawn_model" output="screen"
-      args="-urdf -param robot_description -model $(arg robot_name) -z 0.02" />
+      args="-urdf -param robot_description -model $(arg robot_name) 
+      -x $(arg x) -y $(arg y) -z $(arg z) 
+      -R $(arg R) -P $(arg P) -Y $(arg Y)" />
 
     <include file="$(find doogie_control)/launch/robot_control.launch"/>
   

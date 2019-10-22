@@ -2,18 +2,18 @@
 
 ## Overview
 
-This is a ROS catkin package that provides launchfiles to simulate Doogie Mouse in gazebo.
+This ROS catkin package provides all launchfiles required to simulate Doogie Mouse in Gazebo.
 
 **Keywords:** Micromouse, IEEE, Gazebo, ROS
 
 ### Dependencies 
-- [ROS] (middleware for robotics),
+- [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
 - [doogie_description] (package with doogie URDF),
 - [doogie_control] (package with doogie ros controllers);
 
 ### License
 
-The source code is released under a [BSD 3-Clause license](ros_package_template/LICENSE).
+The source code is released under a [GPLv3](/LICENSE).
 
 **Author: [Caio Amaral]<br />
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
@@ -26,49 +26,6 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 
 ![Example image](doc/example.jpg) TODO
 
-
-### Publications
-
-If you use this work in an academic context, please cite the following publication(s):
-
-TODO
-* P. Fankhauser, M. Bloesch, C. Gehring, M. Hutter, and R. Siegwart: **PAPER TITLE**. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2015. ([PDF](http://dx.doi.org/10.3929/ethz-a-010173654))
-
-        @inproceedings{Fankhauser2015,
-            author = {Fankhauser, P\'{e}ter and Hutter, Marco},
-            booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-            title = {{PAPER TITLE}},
-            publisher = {IEEE},
-            year = {2015}
-        }
-
-
-## Installation
-
-### Installation from Packages
-
-TODO
-
-    sudo apt-get install ros-indigo-...
-
-### Building from Source
-
-#### Building
-
-To build from source, clone the latest version from this repository into your catkin workspace and compile the package using
-
-	cd catkin_workspace/src
-	git clone https://github.com/Brazilian-Institute-of-Robotics/doogie_gazebo.git
-	cd ../
-	catkin build
-
-## Usage
-
-**Launch Doogie Mouse at Gazebo**:
-
-Just launch the robot.launch
-
-	roslaunch doogie_gazebo robot_launch.launch
 
 ## Launch files
 
@@ -164,8 +121,15 @@ Reads temperature measurements and computed the average.
 
 ## Bugs & Feature Requests
 
-Please report bugs and request features using the [Issue Tracker](https://github.com/ethz-asl/ros_best_practices/issues).
+Please report bugs and request features using the [Issue Tracker](TODO).
 
+[doogie_description]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_description
+
+[doogie_control]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_control
+
+[doogie_simulators]: https://github.com/Brazilian-Institute-of-Robotics/doogie_simulators
+
+[gazebo_ros]: http://wiki.ros.org/gazebo_ros
 
 [ROS]: http://www.ros.org
 
@@ -174,12 +138,6 @@ Please report bugs and request features using the [Issue Tracker](https://github
 [Xacro]: http://wiki.ros.org/xacro 
 
 [Rviz]: http://wiki.ros.org/rviz
-
-[doogie_description]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_description
-
-[doogie_control]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_control
-
-[doogie_simulators]: https://github.com/Brazilian-Institute-of-Robotics/doogie_simulators
 
 [BIR - Brazilian Institute of Robotics]: https://github.com/Brazilian-Institute-of-Robotics
 

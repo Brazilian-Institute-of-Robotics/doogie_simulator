@@ -6,12 +6,12 @@ Simulator ROS packages for the Doogie Mouse.
 
 **Keywords:** Micromouse, doogie, Gazebo, ROS
 
-### Simulators Avaible
+### Simulators Available
 
 - [doogie_gazebo] - Gazebo simulation for Doogie Mouse
 
 ### Dependencies 
-- [doogie_base] (the stack with all common packages for Doogie Mouse),
+- [doogie_base] (the stack with all common packages for Doogie Mouse)
 
 ### Publications
 

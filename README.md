@@ -6,7 +6,7 @@ Simulator ROS packages for the Doogie Mouse.
 
 **Keywords:** Micromouse, doogie, Gazebo, ROS
 
-### Simulators Avaible
+### Simulators Available
 
 - [doogie_gazebo] - Gazebo simulation for Doogie Mouse
 

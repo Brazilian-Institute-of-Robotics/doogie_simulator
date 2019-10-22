@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>doogie_simulator</name>
+  <version>0.0.0</version>
+  <description>Metapackage for Doogie Mouse simulation</description>
+  
+  <maintainer email="caioaamaral@gmail.com">Caio Amaral</maintainer>
+  <author email="caioaamaral@gmail.com">Caio Amaral</author>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>doogie_base</exec_depend
+  <exec_depend>doogie_gazebo</exec_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

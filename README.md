@@ -1,31 +1,54 @@
 # doogie_simulator
 
-## Overview
+The `doogie_simulator` stack provides a [ROS] interface for simulation Doogie Mouse plataform.
 
-Simulator ROS packages for the Doogie Mouse.
+**Keywords:** Micromouse, Gazebo, ROS
 
-**Keywords:** Micromouse, doogie, Gazebo, ROS
+## Supported Versions
 
-### Simulators Available
+- **Kinetic**: Built and tested under [ROS] Kinetic and Ubuntu 16.04
 
-- [doogie_gazebo] - Gazebo simulation for Doogie Mouse
+## Dependencies 
+- [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
 
-### Dependencies 
-- [doogie_base] (the stack with all common packages for Doogie Mouse)
+# Table of Contents
+- [doogie_simulator](#doogiesimulator)
+  - [Supported Versions](#supported-versions)
+  - [Dependencies](#dependencies)
+- [Table of Contents](#table-of-contents)
+- [Simulators Available](#simulators-available)
+  - [Gazebo](#gazebo)
+    - [Publications](#publications)
+  - [Installation](#installation)
+    - [Installation from Packages](#installation-from-packages)
+    - [Building from Source](#building-from-source)
+      - [Building](#building)
+  - [Usage](#usage)
+    - [Launch Doogie Mouse at **Gazebo**:](#launch-doogie-mouse-at-gazebo)
+  - [Tutorials](#tutorials)
+  - [Bugs & Feature Requests](#bugs--feature-requests)
+
+# Simulators Available
+
+## Gazebo
+
+- [doogie_gazebo] : ROS package with all launchfiles required to simulate Doogie Mouse in Gazebo
 
 ### Publications
 
 If you use this work in an academic context, please cite the following publication(s):
 
-**TODO**
-* P. Fankhauser, M. Bloesch, C. Gehring, M. Hutter, and R. Siegwart: **PAPER TITLE**. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2015. ([PDF](http://dx.doi.org/10.3929/ethz-a-010173654))
+**TODO - update pdf link**
+* C. Amaral, M. Santos Meneses: **DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA
+APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA
+ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovation and Technology, 2019. ([PDF]())
 
-        @inproceedings{Fankhauser2015,
-            author = {Fankhauser, P\'{e}ter and Hutter, Marco},
-            booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-            title = {{PAPER TITLE}},
-            publisher = {IEEE},
-            year = {2015}
+        @inproceedings{Doogie2019,
+            author = {Amaral, C. and Santos Meneses, M. },
+            booktitle = {V SIINTEC International Symposium on Innovation and Technology},
+            title = {{DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA ARTIFICIAL EM ROBÓTICA MÓVEL}},
+            publisher = {CIMATEC},
+            year = {2019}
         }
 
 
@@ -40,15 +63,17 @@ TODO
 
 ### Building from Source
 
+If you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
+
 #### Building
 
-In order to build **doogie_simulator**, its necessary build its dependencie [doogie_base]. But first, lets create a catkin workspace.
+First, lets create a catkin workspace.
 
-    mkdir -p catkin_ws/src
+    mkdir -p ~/catkin_ws/src
 
-Now, clone the [doogie_base] repository inside your workspace source.
+**doogie_simulator** have dependence on [doogie_base] stack. So let's clone it inside our workspace source.
 
-	cd catkin_workspace/src
+	cd ~/catkin_workspace/src
 	git clone http://github.com/doogie-mouse/doogie_base.git
 
 Then, clone **doogie_simulator** also in your workspace source.
@@ -57,17 +82,31 @@ Then, clone **doogie_simulator** also in your workspace source.
 
 Now, you can build your catkin workspace.
 
-    cd catkin_ws
+    cd ~/catkin_ws
     catkin build
+
+Don't forget to source your workspace before using it.
+    
+    source devel/setup.bash
 
 ## Usage
 
-**Launch Doogie Mouse at Gazebo**:
+### Launch Doogie Mouse at **Gazebo**:
 
 Just launch the robot.launch
 
 	roslaunch doogie_gazebo robot_launch.launch
 
+## Tutorials
+
+Check [doogie_gazebo/Tutorials] on wiki.
+
+## Bugs & Feature Requests
+
+Please report bugs and request features using the [Issue Tracker](TODO).
+
 
 [doogie_base]: http://github.com/doogie-mouse/doogie_base.git
-[doogie_gazebo]: (/doogie_gazebo) 
+[doogie_gazebo]: (/doogie_gazebo)
+[doogie_gazebo/Tutorials]: http://github.com/doogie-mouse/doogie_simulator/wiki/doogie_gazebo
+[ROS]: http://www.ros.org

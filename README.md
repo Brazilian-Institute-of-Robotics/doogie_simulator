@@ -1,12 +1,14 @@
 # doogie_simulator
 
-The `doogie_simulator` stack provides a [ROS] interface for simulation Doogie Mouse plataform.
+The `doogie_simulator` stack provides a [ROS] interface communication for Doogie Mouse plataform simulation.
 
 **Keywords:** Micromouse, Gazebo, ROS
 
 ## Supported Versions
 
 - **Kinetic**: Built and tested under [ROS] Kinetic and Ubuntu 16.04
+
+[![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
 
 ## Dependencies 
 - [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
@@ -19,10 +21,9 @@ The `doogie_simulator` stack provides a [ROS] interface for simulation Doogie Mo
 - [Simulators Available](#simulators-available)
   - [Gazebo](#gazebo)
     - [Publications](#publications)
-  - [Installation](#installation)
-    - [Installation from Packages](#installation-from-packages)
-    - [Building from Source](#building-from-source)
-      - [Building](#building)
+- [Installation](#installation)
+  - [Installation from Packages](#installation-from-packages)
+  - [Building from Source](#building-from-source)
   - [Usage](#usage)
     - [Launch Doogie Mouse at **Gazebo**:](#launch-doogie-mouse-at-gazebo)
   - [Tutorials](#tutorials)
@@ -53,19 +54,19 @@ ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovatio
 
 
 
-## Installation
+# Installation
 
-### Installation from Packages
+## Installation from Packages
 
 TODO
 
     sudo apt-get install ros-indigo-...
 
-### Building from Source
+## Building from Source
 
 If you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
 
-#### Building
+**Building:**
 
 First, lets create a catkin workspace.
 
@@ -99,7 +100,7 @@ Just launch the robot.launch
 
 ## Tutorials
 
-Check [doogie_gazebo/Tutorials] on wiki.
+- For Gazebo simulation, check: [doogie_gazebo/Tutorials] on wiki.
 
 ## Bugs & Feature Requests
 

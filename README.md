@@ -24,9 +24,11 @@ The `doogie_simulator` stack provides a [ROS] interface communication for Doogie
 - [Installation](#installation)
   - [Installation from Packages](#installation-from-packages)
   - [Building from Source](#building-from-source)
-  - [Usage](#usage)
+  - [Example of Usage](#example-of-usage)
     - [Launch Doogie Mouse at **Gazebo**:](#launch-doogie-mouse-at-gazebo)
   - [Tutorials](#tutorials)
+  - [Purpose of the Project](#purpose-of-the-project)
+  - [License](#license)
   - [Bugs & Feature Requests](#bugs--feature-requests)
 
 # Simulators Available
@@ -90,7 +92,7 @@ Don't forget to source your workspace before using it.
     
     source devel/setup.bash
 
-## Usage
+## Example of Usage
 
 ### Launch Doogie Mouse at **Gazebo**:
 
@@ -102,12 +104,19 @@ Just launch the robot.launch
 
 - For Gazebo simulation, check: [doogie_gazebo/Tutorials] on wiki.
 
+## Purpose of the Project
+
+## License
+
+Doogie Mouse Simulator source code is released under a [GPLv3](/LICENSE).
+
 ## Bugs & Feature Requests
 
-Please report bugs and request features using the [Issue Tracker](TODO).
+Please report bugs and request features using the [Issue Tracker].
 
 
 [doogie_base]: http://github.com/doogie-mouse/doogie_base.git
-[doogie_gazebo]: (/doogie_gazebo)
+[doogie_gazebo]: (doogie_gazebo)
 [doogie_gazebo/Tutorials]: http://github.com/doogie-mouse/doogie_simulator/wiki/doogie_gazebo
+[Issue Tracker]: http://github.com/doogie-mouse/doogie_simulator/issues
 [ROS]: http://www.ros.org

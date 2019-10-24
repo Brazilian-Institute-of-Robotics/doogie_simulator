@@ -19,7 +19,9 @@ The source code is released under a [GPLv3](/LICENSE).
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
-The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
+### Supported Versions
+
+The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using Gazebo 7.0.0 (the one that comes with [ROS] Kinetic Desktop-full installation). 
 
 [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
 
@@ -77,6 +79,10 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 
 ## Nodes
 
+The robot model is controlled by [ros_control / gazebo_ros_control] integration. 
+
+[doogie_control] provides Gazebo simulation the diff_driver_controller to control the robot. 
+
 ### ros_package_template
 
 Reads temperature measurements and computed the average.
@@ -130,6 +136,8 @@ Please report bugs and request features using the [Issue Tracker](TODO).
 [doogie_simulators]: https://github.com/Brazilian-Institute-of-Robotics/doogie_simulators
 
 [gazebo_ros]: http://wiki.ros.org/gazebo_ros
+
+[ros_control / gazebo_ros_control]: http://gazebosim.org/tutorials?tut=ros_control
 
 [ROS]: http://www.ros.org
 

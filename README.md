@@ -1,8 +1,12 @@
-# doogie_simulator
+# **doogie_simulator**
 
-The `**doogie_simulator**` stack provides a [ROS] interface communication for Doogie Mouse plataform simulation. For tutorials, check [doogie_gazebo/Tutorials] on wiki.
+The **`doogie_simulator`** stack provides a [ROS] interface communication to simulate Doogie Mouse plataform. For tutorials, check [doogie_gazebo/Tutorials] on wiki.
 
 **Keywords:** Micromouse, Gazebo, ROS
+
+**Author: [Caio Amaral]<br />
+Affiliation: [BIR - Brazilian Institute of Robotics]<br />
+Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 ## Supported Versions
 
@@ -13,24 +17,24 @@ The `**doogie_simulator**` stack provides a [ROS] interface communication for Do
 ## Dependencies 
 - [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
 
-# Table of Contents
-- [doogie_simulator](#doogiesimulator)
+# **Table of Contents**
+- [**doogie_simulator**](#doogiesimulator)
   - [Supported Versions](#supported-versions)
   - [Dependencies](#dependencies)
-- [Table of Contents](#table-of-contents)
-- [Simulators Supported](#simulators-supported)
+- [**Table of Contents**](#table-of-contents)
+- [**Simulators Supported**](#simulators-supported)
   - [Gazebo](#gazebo)
     - [Publications](#publications)
-- [Installation](#installation)
+- [**Installation**](#installation)
   - [Installation from Packages](#installation-from-packages)
   - [Building from Source](#building-from-source)
   - [Example of Usage](#example-of-usage)
     - [Launch Doogie Mouse at **Gazebo**:](#launch-doogie-mouse-at-gazebo)
-- [Purpose of the Project](#purpose-of-the-project)
+- [**Purpose of the Project**](#purpose-of-the-project)
 - [License](#license)
-- [Bugs & Feature Requests](#bugs--feature-requests)
+- [**Bugs & Feature Requests**](#bugs--feature-requests)
 
-# Simulators Supported
+# **Simulators Supported**
 
 ## Gazebo
 
@@ -40,10 +44,9 @@ The `**doogie_simulator**` stack provides a [ROS] interface communication for Do
 
 If you use this work in an academic context, please cite the following publication(s):
 
-**TODO - update pdf link**
 * C. Amaral, M. Santos Meneses: **DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA
 APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA
-ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovation and Technology, 2019. ([PDF]())
+ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovation and Technology, 2019. ([PDF](/doogie_gazebo/docs/Paper_SIINTEC_V.pdf))
 
         @inproceedings{Doogie2019,
             author = {Amaral, C. and Santos Meneses, M. },
@@ -53,9 +56,9 @@ ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovatio
             year = {2019}
         }
 
+____
 
-
-# Installation
+# **Installation**
 
 ## Installation from Packages
 
@@ -75,7 +78,7 @@ First, lets create a catkin workspace.
 
     mkdir -p ~/catkin_ws/src
 
-**`doogie_simulator`** have dependence on [doogie_base] stack. So let's clone it inside our workspace source and install it.
+**doogie_simulator** depends on [doogie_base] stack. So let's clone it inside our workspace source and install it.
 
 	cd ~/catkin_workspace/src
 	git clone http://github.com/doogie-mouse/doogie_base.git
@@ -95,8 +98,7 @@ Don't forget to source your workspace before using it.
     source devel/setup.bash
 </br>
 
-Example of Usage
----
+## Example of Usage
 
 ### Launch Doogie Mouse at **Gazebo**:
 
@@ -106,7 +108,7 @@ Just launch the robot.launch
 
 </br>
 
-# Purpose of the Project
+# **Purpose of the Project**
 </br>
 
 # License
@@ -115,13 +117,13 @@ Doogie Mouse Simulator source code is released under a [GPLv3](/LICENSE).
 
 </br>
 
-# Bugs & Feature Requests
+# **Bugs & Feature Requests**
 
 Please report bugs and request features using the [Issue Tracker].
 
 
 [doogie_base]: http://github.com/doogie-mouse/doogie_base.git
-[doogie_gazebo]: (doogie_gazebo)
+[doogie_gazebo]: doogie_gazebo
 [doogie_gazebo/Tutorials]: http://github.com/doogie-mouse/doogie_simulator/wiki/doogie_gazebo
 [Issue Tracker]: http://github.com/doogie-mouse/doogie_simulator/issues
 [ROS]: http://www.ros.org

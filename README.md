@@ -1,6 +1,6 @@
 # doogie_simulator
 
-The `doogie_simulator` stack provides a [ROS] interface communication for Doogie Mouse plataform simulation.
+The `**doogie_simulator**` stack provides a [ROS] interface communication for Doogie Mouse plataform simulation. For tutorials, check [doogie_gazebo/Tutorials] on wiki.
 
 **Keywords:** Micromouse, Gazebo, ROS
 
@@ -8,7 +8,7 @@ The `doogie_simulator` stack provides a [ROS] interface communication for Doogie
 
 - **Kinetic**: Built and tested under [ROS] Kinetic and Ubuntu 16.04
 
-[![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
+<!-- [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO -->
 
 ## Dependencies 
 - [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
@@ -18,7 +18,7 @@ The `doogie_simulator` stack provides a [ROS] interface communication for Doogie
   - [Supported Versions](#supported-versions)
   - [Dependencies](#dependencies)
 - [Table of Contents](#table-of-contents)
-- [Simulators Available](#simulators-available)
+- [Simulators Supported](#simulators-supported)
   - [Gazebo](#gazebo)
     - [Publications](#publications)
 - [Installation](#installation)
@@ -26,12 +26,11 @@ The `doogie_simulator` stack provides a [ROS] interface communication for Doogie
   - [Building from Source](#building-from-source)
   - [Example of Usage](#example-of-usage)
     - [Launch Doogie Mouse at **Gazebo**:](#launch-doogie-mouse-at-gazebo)
-- [Tutorials](#tutorials)
 - [Purpose of the Project](#purpose-of-the-project)
 - [License](#license)
 - [Bugs & Feature Requests](#bugs--feature-requests)
 
-# Simulators Available
+# Simulators Supported
 
 ## Gazebo
 
@@ -64,6 +63,8 @@ TODO
 
     sudo apt-get install ros-indigo-...
 
+</br>
+
 ## Building from Source
 
 If you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
@@ -74,16 +75,17 @@ First, lets create a catkin workspace.
 
     mkdir -p ~/catkin_ws/src
 
-**doogie_simulator** have dependence on [doogie_base] stack. So let's clone it inside our workspace source.
+**`doogie_simulator`** have dependence on [doogie_base] stack. So let's clone it inside our workspace source and install it.
 
 	cd ~/catkin_workspace/src
 	git clone http://github.com/doogie-mouse/doogie_base.git
+    rosdep install --from-paths src -ignore-src -r -y
 
 Then, clone **doogie_simulator** also in your workspace source.
         
-    git clone http://github.com/doogie-mouse/doogie_base.git
+    git clone http://github.com/doogie-mouse/doogie_simulator.git
 
-Now, you can build your catkin workspace.
+Now, just build your catkin workspace.
 
     cd ~/catkin_ws
     catkin build
@@ -91,8 +93,10 @@ Now, you can build your catkin workspace.
 Don't forget to source your workspace before using it.
     
     source devel/setup.bash
+</br>
 
-## Example of Usage
+Example of Usage
+---
 
 ### Launch Doogie Mouse at **Gazebo**:
 
@@ -100,15 +104,16 @@ Just launch the robot.launch
 
 	roslaunch doogie_gazebo robot_launch.launch
 
-# Tutorials
-
-- For Gazebo simulation, check: [doogie_gazebo/Tutorials] on wiki.
+</br>
 
 # Purpose of the Project
+</br>
 
 # License
 
 Doogie Mouse Simulator source code is released under a [GPLv3](/LICENSE).
+
+</br>
 
 # Bugs & Feature Requests
 

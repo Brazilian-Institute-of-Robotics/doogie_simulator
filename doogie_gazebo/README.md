@@ -1,21 +1,8 @@
 # doogie_gazebo
 
-## Overview
-
 This ROS catkin package provides all launchfiles required in order to simulate Doogie Mouse in Gazebo.
 
 **Keywords:** Micromouse, IEEE, Gazebo, ROS
-
-</br>
-
-### Dependencies 
-- [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
-- [doogie_description] (package with doogie URDF),
-- [doogie_control] (package with doogie ros controllers);
-
-### License
-
-The source code is released under a [GPLv3](/LICENSE).
 
 **Author: [Caio Amaral]<br />
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
@@ -23,7 +10,14 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 </br>
 
-### Supported Versions
+## Dependencies 
+- [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
+- [doogie_description] (package with doogie URDF),
+- [doogie_control] (package with doogie ros controllers);
+
+</br>
+
+## Supported Versions
 
 The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using Gazebo 7.0.0 (the one that comes with [ROS] Kinetic Desktop-full installation). 
 
@@ -36,7 +30,7 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 
 ## Launch files
 
--> **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
+* **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
 
   - **Arguments to set Doogie Mouse spawn**
 

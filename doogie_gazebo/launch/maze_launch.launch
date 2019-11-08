@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="maze_name" default="minus"/>
+
+    <include file="$(find doogie_description)/launch/maze_description.launch">
+        <arg name="maze_name" value="$(arg maze_name)"/>
+    </include>
+
+    <group ns="$(arg maze_name)">
+        
+        <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param maze_description -model $(arg maze_name) "/>
+
+    </group>
+
+</launch>

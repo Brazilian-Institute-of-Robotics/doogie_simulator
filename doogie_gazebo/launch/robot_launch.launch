@@ -12,7 +12,7 @@
 
   <!-- The arguments you can pass spawn node, for example name:=mouse_1 -->
   <arg name="robot_name" default="doogie"/>
-  <arg name="robot_param" default="doogie/robot_description"/>  
+  <arg name="robot_param" default="$(arg robot_name)/robot_description"/>  
 
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
@@ -33,11 +33,13 @@
     <arg name="world_name" value="$(arg world_name)"/>
   </include>
 
+  <include file="$(find doogie_gazebo)/launch/maze_launch.launch">
+    
+  </include>
+
   <include file="$(find doogie_description)/launch/robot_description.launch">
     <arg name="robot_param" value="$(arg robot_param)"/>
   </include>
-
-  
 
   <group ns="$(arg robot_name)">
     <!--Note that because of 'group ns' all doogie params will be prefixed by

@@ -23,44 +23,26 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
   - [Dependencies](#dependencies)
 - [**Table of Contents**](#table-of-contents)
 - [**Simulators Supported**](#simulators-supported)
-  - [Gazebo](#gazebo)
-    - [Publications](#publications)
+    - [Gazebo](#gazebo)
 - [**Installation**](#installation)
-  - [Installation from Packages](#installation-from-packages)
-  - [Building from Source](#building-from-source)
+  - [· Installation from Packages](#installation-from-packages)
+  - [· Building from Source](#building-from-source)
   - [Example of Usage](#example-of-usage)
-    - [Launch Doogie Mouse at **Gazebo**:](#launch-doogie-mouse-at-gazebo)
+    - [Launch Doogie Mouse at Gazebo:](#launch-doogie-mouse-at-gazebo)
 - [**Purpose of the Project**](#purpose-of-the-project)
-- [License](#license)
+- [**License**](#license)
 - [**Bugs & Feature Requests**](#bugs--feature-requests)
 
 # **Simulators Supported**
 
-## Gazebo
+### Gazebo
 
 - [doogie_gazebo] : ROS package with all launchfiles required to simulate Doogie Mouse in Gazebo
-
-### Publications
-
-If you use this work in an academic context, please cite the following publication(s):
-
-* C. Amaral, M. Santos Meneses: **DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA
-APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA
-ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovation and Technology, 2019. ([PDF](/doogie_gazebo/docs/Paper_SIINTEC_V.pdf))
-
-        @inproceedings{Doogie2019,
-            author = {Amaral, C. and Santos Meneses, M. },
-            booktitle = {V SIINTEC International Symposium on Innovation and Technology},
-            title = {{DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA ARTIFICIAL EM ROBÓTICA MÓVEL}},
-            publisher = {CIMATEC},
-            year = {2019}
-        }
-
 ____
 
 # **Installation**
 
-## Installation from Packages
+## · Installation from Packages
 
 TODO
 
@@ -68,9 +50,9 @@ TODO
 
 </br>
 
-## Building from Source
+## · Building from Source
 
-If you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
+Attention, if you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
 
 **Building:**
 
@@ -100,7 +82,7 @@ Don't forget to source your workspace before using it.
 
 ## Example of Usage
 
-### Launch Doogie Mouse at **Gazebo**:
+### Launch Doogie Mouse at Gazebo:
 
 Just launch the robot.launch
 
@@ -111,7 +93,7 @@ Just launch the robot.launch
 # **Purpose of the Project**
 </br>
 
-# License
+# **License**
 
 Doogie Mouse Simulator source code is released under a [GPLv3](/LICENSE).
 
@@ -121,7 +103,8 @@ Doogie Mouse Simulator source code is released under a [GPLv3](/LICENSE).
 
 Please report bugs and request features using the [Issue Tracker].
 
-
+[BIR - Brazilian Institute of Robotics]: https://github.com/Brazilian-Institute-of-Robotics
+[Caio Amaral]: https://github.com/caioaamaral
 [doogie_base]: http://github.com/doogie-mouse/doogie_base.git
 [doogie_gazebo]: doogie_gazebo
 [doogie_gazebo/Tutorials]: http://github.com/doogie-mouse/doogie_simulator/wiki/doogie_gazebo

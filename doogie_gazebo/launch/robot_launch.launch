@@ -12,7 +12,9 @@
 
   <!-- The arguments you can pass spawn node, for example name:=mouse_1 -->
   <arg name="robot_name" default="doogie"/>
-  <arg name="robot_param" default="$(arg robot_name)/robot_description"/>  
+  <arg name="robot_param" default="$(arg robot_name)/robot_description"/> 
+
+  <arg name="maze_name" default="minus"/> 
 
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
@@ -34,7 +36,7 @@
   </include>
 
   <include file="$(find doogie_gazebo)/launch/maze_launch.launch">
-    
+    <arg name="maze_name" value="$(arg maze_name)"/>
   </include>
 
   <include file="$(find doogie_description)/launch/robot_description.launch">

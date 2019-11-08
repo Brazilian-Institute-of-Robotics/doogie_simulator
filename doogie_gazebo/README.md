@@ -9,6 +9,25 @@ Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 </br>
+____
+
+## Dependencies 
+- [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
+- [doogie_description] (package with doogie URDF),
+- [doogie_control] (package with doogie ros controllers);
+
+</br>
+
+## Supported Versions
+
+The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using Gazebo 7.0.0 (the one that comes with [ROS] Kinetic Desktop-full installation). 
+
+[![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
+
+
+![Example image](/doogie_gazebo/doc/doogie_gazebo.jpg)
+
+</br>
 
 ### Publications
 
@@ -28,24 +47,6 @@ ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovatio
 
 ____
 
-## Dependencies 
-- [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
-- [doogie_description] (package with doogie URDF),
-- [doogie_control] (package with doogie ros controllers);
-
-</br>
-
-## Supported Versions
-
-The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using Gazebo 7.0.0 (the one that comes with [ROS] Kinetic Desktop-full installation). 
-
-[![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
-
-
-![Example image](doc/example.jpg) TODO
-
-</br>
-
 ## Launch files
 
 1. **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
@@ -63,7 +64,7 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
        - **`z:`** set z position coordinate where the robot will be spawned.
           - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
 
-  2. **Arguments to set Gazebo World**
+  1. **Arguments to set Gazebo World**
 
        - **`paused:`** start Gazebo in a paused state. 
 

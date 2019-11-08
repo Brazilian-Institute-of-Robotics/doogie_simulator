@@ -1,4 +1,4 @@
-# doogie_gazebo
+# **doogie_gazebo**
 
 This ROS catkin package provides all launchfiles required in order to simulate Doogie Mouse in Gazebo.
 
@@ -8,15 +8,26 @@ This ROS catkin package provides all launchfiles required in order to simulate D
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
-</br>
-____
-
 ## Dependencies 
 - [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
 - [doogie_description] (package with doogie URDF),
 - [doogie_control] (package with doogie ros controllers);
+____
 
-</br>
+# Table of Contents
+- [**doogie_gazebo**](#doogiegazebo)
+  - [Dependencies](#dependencies)
+- [Table of Contents](#table-of-contents)
+  - [Supported Versions](#supported-versions)
+    - [Publications](#publications)
+  - [Launch files](#launch-files)
+  - [Controllers Used](#controllers-used)
+  - [Topics](#topics)
+      - [Services](#services)
+      - [Parameters](#parameters)
+    - [NODE_B_NAME](#nodebname)
+  - [Bugs & Feature Requests](#bugs--feature-requests)
+____
 
 ## Supported Versions
 
@@ -25,7 +36,7 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
 
 
-![Example image](/doogie_gazebo/doc/doogie_gazebo.jpg)
+![Example image](docs/doogie_gazebo.png)
 
 </br>
 
@@ -64,15 +75,15 @@ ____
        - **`z:`** set z position coordinate where the robot will be spawned.
           - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
 
-  1. **Arguments to set Gazebo World**
+     - **Arguments to set Gazebo World**
 
        - **`paused:`** start Gazebo in a paused state. 
 
          - Default: `false`.
   
-           - **`use_sim_time:`** tells if nodes will use time published at /clock.
+       - **`use_sim_time:`** tells if nodes will use time published at /clock.
 
-      - Default: `true` 
+          - Default: `true` 
 
        - **`gui:`** load Gazebo user interface display.
     
@@ -98,27 +109,28 @@ ____
 
 </br>
 
-## Nodes
+## Controllers Used
 
-The robot model is controlled by [ros_control / gazebo_ros_control] integration. 
+**doogie_gazebo** uses **gazebo_ros_control** to provide simulation some of the default controllers used by ROS. The **ros_controllers** used in this simulation are:
 
-[doogie_control] provides Gazebo simulation the diff_driver_controller to control the robot. 
+   - move_base_controller (diff_drive_controller/DiffDriveController)
+   - joint_publisher (joint_state_controller/JointStateController)
 
-### ros_package_template
+Futhermore, this package also uses some sensors plugins from **gazebo_plugins**. Currently it's only using:
 
-Reads temperature measurements and computed the average.
+   - gazebo_ros_range (plugin used here to simulate the IR sensors)
 
+**gazebo_ros_control** and each **gazebo_plugins** used here in the simulation was previously integrated to Doogie Mouse by its URDF, which you can find inside [doogie_description] package.
 
-#### Subscribed Topics
+## Topics
 
-* **`/temperature`** ([sensor_msgs/Temperature])
+- **`/move_base_controller/cmd_vel`** : [geometry_msgs/Twist]
 
-	The temperature measurements from which the average is computed.
+	Publish linear (m/s) and angular (rad/s) Doogie's velocity, by default it's using diff_drive_controller. **This is the one used to move Doogie Mouse in Gazebo by controlling its velocity.**
 
-
-#### Published Topics
-
-...
+- **`/joint_states`** : [sensor_msgs/JoinState]
+  
+  Publish Doogie's wheels position (rad) and velocity (rad/s). **This is the one used to read Doogie Mouse velocity data.**
 
 
 #### Services

@@ -1,6 +1,6 @@
 # **doogie_simulator**
 
-The **doogie_simulator** stack provides a [ROS] interface communication to simulate Doogie Mouse plataform. For tutorials, check [doogie_gazebo/Tutorials] on wiki.
+The **doogie_simulator** stack provides a [ROS] interface communication to simulate Doogie Mouse plataform. For tutorials, please check [doogie_gazebo/Tutorials] on wiki.
 
 **Keywords:** Micromouse, Gazebo, ROS
 

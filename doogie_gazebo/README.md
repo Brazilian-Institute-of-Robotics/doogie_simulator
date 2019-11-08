@@ -10,6 +10,24 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 </br>
 
+### Publications
+
+If you use this work in an academic context, please cite the following publication(s):
+
+* C. Amaral, M. Santos Meneses: **DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA
+APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA
+ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovation and Technology, 2019. ([PDF](/doogie_gazebo/docs/Paper_SIINTEC_V.pdf))
+
+        @inproceedings{Doogie2019,
+            author = {Amaral, C. and Santos Meneses, M. },
+            booktitle = {V SIINTEC International Symposium on Innovation and Technology},
+            title = {{DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA ARTIFICIAL EM ROBÓTICA MÓVEL}},
+            publisher = {CIMATEC},
+            year = {2019}
+        }
+
+____
+
 ## Dependencies 
 - [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
 - [doogie_description] (package with doogie URDF),
@@ -30,49 +48,50 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 
 ## Launch files
 
-* **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
+1. **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
 
-  - **Arguments to set Doogie Mouse spawn**
+     - **Arguments to set Doogie Mouse spawn**
 
-    - **`robot_name:`** specifie a nickname for Doogie Mouse when in gazebo.
+       - **`robot_name:`** specifie a nickname for Doogie Mouse when in gazebo.
       
-      - Default: `doogie`
-    - **`x:`** set x position coordinate where the robot will be spawned.
-      - Default:`0.0`
-    - **`y:`** set y position coordinate where the robot will be spawned.
-      - Default:`0.0`
-    - **`z:`** set z position coordinate where the robot will be spawned.
-      - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
-
-  - **Arguments to set Gazebo World**
-
-    - **`paused:`** start Gazebo in a paused state. 
-
-      - Default: `false`.
+          - Default: `doogie`
   
-    - **`use_sim_time:`** tells if nodes will use time published at /clock.
+       - **`x:`** set x position coordinate where the robot will be spawned.
+          - Default:`0.0`
+       - **`y:`** set y position coordinate where the robot will be spawned.
+          - Default:`0.0`
+       - **`z:`** set z position coordinate where the robot will be spawned.
+          - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
+
+  2. **Arguments to set Gazebo World**
+
+       - **`paused:`** start Gazebo in a paused state. 
+
+         - Default: `false`.
+  
+           - **`use_sim_time:`** tells if nodes will use time published at /clock.
 
       - Default: `true` 
 
-    - **`gui:`** load Gazebo user interface display.
+       - **`gui:`** load Gazebo user interface display.
     
-      - Default: `true`
+          - Default: `true`
 
-    - **`debug:`** start Gazebo Server (gzserver) at debug mode using gdb.
+       - **`debug:`** start Gazebo Server (gzserver) at debug mode using gdb.
 
-      - Default: `false`
+          - Default: `false`
 
-    - **`physics:`** specifie wich physics engine will be used by Gazebo.
+       - **`physics:`** specifie wich physics engine will be used by Gazebo.
 
-      - Default: `ode`
+          - Default: `ode`
 
-    - **`verbose:`** run gzserver and Gazebo Client (gzclient)in verbose mode (i.e, printing errors and warnings to the terminal).
+       - **`verbose:`** run gzserver and Gazebo Client (gzclient)in verbose mode (i.e, printing errors and warnings to the terminal).
   
-      - Default: `false`
+          - Default: `false`
 
-    - **`world_name:`** tells gazebo which world will be loaded.
+       - **`world_name:`** tells gazebo which world will be loaded.
     
-      - Default: `worlds/empty_world` 
+          - Default: `worlds/empty_world` 
     
         **Note:** the **world_name** path is with respect to **GAZEBO_RESOURCE_PATH** environmental variable.
 

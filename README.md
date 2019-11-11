@@ -51,7 +51,8 @@ TODO
 
     sudo apt-get install ros-indigo-...
 
-</br>
+
+or you could also build this repository from source.
 
 ### Building from Source:
 

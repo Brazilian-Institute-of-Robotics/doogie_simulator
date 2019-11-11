@@ -8,6 +8,17 @@ This ROS catkin package provides all launchfiles required in order to simulate *
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
+## Supported Versions
+
+The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using **Gazebo 7.0.0** (the one that comes with [ROS] Kinetic Desktop-full installation). 
+
+<!-- [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO -->
+
+<p align="center">
+   <img src="docs/doogie_gazebo.png" alt="doogie_gazebo sim" title="Example Image">
+</p>
+</br>
+
 ## Dependencies 
 - [gazebo_ros] (provides all ROS message and service publishers for interfacing with Gazebo through ROS),
 - [gazebo_ros_control] (package to integrate **ros_control** to Gazebo)
@@ -17,9 +28,9 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 # **Table of Contents**
 - [**doogie_gazebo**](#doogiegazebo)
+  - [Supported Versions](#supported-versions)
   - [Dependencies](#dependencies)
 - [**Table of Contents**](#table-of-contents)
-  - [Supported Versions](#supported-versions)
     - [Publications](#publications)
 - [**Launch files**](#launch-files)
 - [**Controllers Used**](#controllers-used)
@@ -28,16 +39,6 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
       - [Parameters](#parameters)
     - [NODE_B_NAME](#nodebname)
 
-## Supported Versions
-
-The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using Gazebo 7.0.0 (the one that comes with [ROS] Kinetic Desktop-full installation). 
-
-[![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
-
-
-<p align="center">
-   <img src="docs/doogie_gazebo.png" alt="doogie_gazebo sim" title="Example Image">
-</p>
 </br>
 
 ### Publications

@@ -26,8 +26,8 @@ ____
 - [**Simulators Supported**](#simulators-supported)
     - [Gazebo](#gazebo)
 - [**Installation**](#installation)
-    - [· Installation from Packages](#installation-from-packages)
-    - [· Building from Source](#building-from-source)
+    - [Installation from Packages:](#installation-from-packages)
+    - [Building from Source:](#building-from-source)
   - [Example of Usage](#example-of-usage)
     - [Launch Doogie Mouse at Gazebo:](#launch-doogie-mouse-at-gazebo)
 - [**Purpose of the Project**](#purpose-of-the-project)
@@ -43,7 +43,7 @@ ____
 
 # **Installation**
 
-### · Installation from Packages
+### Installation from Packages:
 
 TODO
 
@@ -51,7 +51,7 @@ TODO
 
 </br>
 
-### · Building from Source
+### Building from Source:
 
 Attention, if you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
 

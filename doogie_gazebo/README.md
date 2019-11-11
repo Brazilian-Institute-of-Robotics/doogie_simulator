@@ -1,6 +1,6 @@
 # **doogie_gazebo**
 
-This ROS catkin package provides all launchfiles required in order to simulate Doogie Mouse in Gazebo.
+This ROS catkin package provides all launchfiles required in order to simulate **Doogie Mouse** in Gazebo.
 
 **Keywords:** Micromouse, IEEE, Gazebo, ROS
 
@@ -9,24 +9,25 @@ Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 ## Dependencies 
-- [gazebo_ros] (Provides all ROS message and service publishers for interfacing with Gazebo through ROS),
+- [gazebo_ros] (provides all ROS message and service publishers for interfacing with Gazebo through ROS),
+- [gazebo_ros_control] (package to integrate **ros_control** to Gazebo)
+- [gazebo_plugins] (package to provide independent Gazebo plugins for sensors, models, etc.), 
 - [doogie_description] (package with doogie URDF),
 - [doogie_control] (package with doogie ros controllers);
 ____
 
-# Table of Contents
+# **Table of Contents**
 - [**doogie_gazebo**](#doogiegazebo)
   - [Dependencies](#dependencies)
-- [Table of Contents](#table-of-contents)
+- [**Table of Contents**](#table-of-contents)
   - [Supported Versions](#supported-versions)
     - [Publications](#publications)
-  - [Launch files](#launch-files)
-  - [Controllers Used](#controllers-used)
-  - [Topics](#topics)
-      - [Services](#services)
+- [Launch files](#launch-files)
+- [Controllers Used](#controllers-used)
+- [Topics](#topics)
+- [Services](#services)
       - [Parameters](#parameters)
     - [NODE_B_NAME](#nodebname)
-  - [Bugs & Feature Requests](#bugs--feature-requests)
 ____
 
 ## Supported Versions
@@ -36,8 +37,9 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO
 
 
-![Example image](docs/doogie_gazebo.png)
-
+<p align="center">
+   <img src="docs/doogie_gazebo.png" alt="doogie_gazebo sim" title="Example Image">
+</p>
 </br>
 
 ### Publications
@@ -58,7 +60,7 @@ ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovatio
 
 ____
 
-## Launch files
+# Launch files
 
 1. **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
 
@@ -106,23 +108,22 @@ ____
           - Default: `worlds/empty_world` 
     
         **Note:** the **world_name** path is with respect to **GAZEBO_RESOURCE_PATH** environmental variable.
-
 </br>
 
-## Controllers Used
+# Controllers Used
 
 **doogie_gazebo** uses **gazebo_ros_control** to provide simulation some of the default controllers used by ROS. The **ros_controllers** used in this simulation are:
 
-   - move_base_controller (diff_drive_controller/DiffDriveController)
-   - joint_publisher (joint_state_controller/JointStateController)
+   - **move_base_controller** (diff_drive_controller/DiffDriveController)
+   - **joint_publisher** (joint_state_controller/JointStateController)
 
 Futhermore, this package also uses some sensors plugins from **gazebo_plugins**. Currently it's only using:
 
-   - gazebo_ros_range (plugin used here to simulate the IR sensors)
+   - **gazebo_ros_range** (plugin used here to simulate the IR sensors)
 
-**gazebo_ros_control** and each **gazebo_plugins** used here in the simulation was previously integrated to Doogie Mouse by its URDF, which you can find inside [doogie_description] package.
+**gazebo_ros_control** and each of the **gazebo_plugins** used here in the simulation was previously declared in Doogie Mouse's URDF, check [doogie_description], and defined in [doogie_control].
 
-## Topics
+# Topics
 
 - **`/move_base_controller/cmd_vel`** : [geometry_msgs/Twist]
 
@@ -133,7 +134,7 @@ Futhermore, this package also uses some sensors plugins from **gazebo_plugins**.
   Publish Doogie's wheels position (rad) and velocity (rad/s). **This is the one used to read Doogie Mouse velocity data.**
 
 
-#### Services
+# Services
 
 * **`get_average`** ([std_srvs/Trigger])
 
@@ -158,10 +159,6 @@ Futhermore, this package also uses some sensors plugins from **gazebo_plugins**.
 ...
 
 
-## Bugs & Feature Requests
-
-Please report bugs and request features using the [Issue Tracker](TODO).
-
 [doogie_description]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_description
 
 [doogie_control]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_control
@@ -169,6 +166,10 @@ Please report bugs and request features using the [Issue Tracker](TODO).
 [doogie_simulators]: https://github.com/Brazilian-Institute-of-Robotics/doogie_simulators
 
 [gazebo_ros]: http://wiki.ros.org/gazebo_ros
+
+[gazebo_ros_control]: http://wiki.ros.org/gazebo_ros_control
+
+[gazebo_plugins]: http://wiki.ros.org/gazebo_plugins
 
 [ros_control / gazebo_ros_control]: http://gazebosim.org/tutorials?tut=ros_control
 

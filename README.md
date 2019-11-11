@@ -16,6 +16,7 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 ## Dependencies 
 - [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
+____
 
 # **Table of Contents**
 - [**doogie_simulator**](#doogiesimulator)
@@ -78,7 +79,8 @@ Now, just build your catkin workspace.
 Don't forget to source your workspace before using it.
     
     source devel/setup.bash
-</br>
+
+____
 
 ## Example of Usage
 

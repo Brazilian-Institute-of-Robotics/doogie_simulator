@@ -16,7 +16,8 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 ### Dependencies 
 - [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
-____
+
+</br>
 
 # **Table of Contents**
 - [**doogie_simulator**](#doogiesimulator)
@@ -39,7 +40,8 @@ ____
 ### Gazebo
 
 - [doogie_gazebo] : ROS package with all launchfiles required to simulate Doogie Mouse in Gazebo
-____
+
+</br>
 
 # **Installation**
 
@@ -80,7 +82,7 @@ Don't forget to source your workspace before using it.
     
     source devel/setup.bash
 
-____
+</br>
 
 ## Example of Usage
 

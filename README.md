@@ -8,26 +8,26 @@ The **doogie_simulator** stack provides a [ROS] interface communication to simul
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
-## Supported Versions
+### Supported Versions
 
 - **Kinetic**: Built and tested under [ROS] Kinetic and Ubuntu 16.04
 
 <!-- [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO -->
 
-## Dependencies 
+### Dependencies 
 - [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
 ____
 
 # **Table of Contents**
 - [**doogie_simulator**](#doogiesimulator)
-  - [Supported Versions](#supported-versions)
-  - [Dependencies](#dependencies)
+    - [Supported Versions](#supported-versions)
+    - [Dependencies](#dependencies)
 - [**Table of Contents**](#table-of-contents)
 - [**Simulators Supported**](#simulators-supported)
     - [Gazebo](#gazebo)
 - [**Installation**](#installation)
-  - [· Installation from Packages](#installation-from-packages)
-  - [· Building from Source](#building-from-source)
+    - [· Installation from Packages](#installation-from-packages)
+    - [· Building from Source](#building-from-source)
   - [Example of Usage](#example-of-usage)
     - [Launch Doogie Mouse at Gazebo:](#launch-doogie-mouse-at-gazebo)
 - [**Purpose of the Project**](#purpose-of-the-project)
@@ -43,7 +43,7 @@ ____
 
 # **Installation**
 
-## · Installation from Packages
+### · Installation from Packages
 
 TODO
 
@@ -51,7 +51,7 @@ TODO
 
 </br>
 
-## · Building from Source
+### · Building from Source
 
 Attention, if you haven't installed [ROS] yet, please check [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu). Desktop-Full Install is the recommended one in order to work with this repository.    
 

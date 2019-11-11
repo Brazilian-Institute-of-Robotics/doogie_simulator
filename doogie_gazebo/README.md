@@ -14,7 +14,6 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 - [gazebo_plugins] (package to provide independent Gazebo plugins for sensors, models, etc.), 
 - [doogie_description] (package with doogie URDF),
 - [doogie_control] (package with doogie ros controllers);
-____
 
 # **Table of Contents**
 - [**doogie_gazebo**](#doogiegazebo)
@@ -22,13 +21,12 @@ ____
 - [**Table of Contents**](#table-of-contents)
   - [Supported Versions](#supported-versions)
     - [Publications](#publications)
-- [Launch files](#launch-files)
-- [Controllers Used](#controllers-used)
-- [Topics](#topics)
+- [**Launch files**](#launch-files)
+- [**Controllers Used**](#controllers-used)
+- [**Topics**](#topics)
 - [Services](#services)
       - [Parameters](#parameters)
     - [NODE_B_NAME](#nodebname)
-____
 
 ## Supported Versions
 
@@ -60,7 +58,7 @@ ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovatio
 
 ____
 
-# Launch files
+# **Launch files**
 
 1. **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
 
@@ -76,6 +74,9 @@ ____
           - Default:`0.0`
        - **`z:`** set z position coordinate where the robot will be spawned.
           - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
+
+     - **Arguments to set Maze spawn**
+       - **`maze_name:`**specifie wich maze will be loaded and its name.
 
      - **Arguments to set Gazebo World**
 
@@ -108,9 +109,18 @@ ____
           - Default: `worlds/empty_world` 
     
         **Note:** the **world_name** path is with respect to **GAZEBO_RESOURCE_PATH** environmental variable.
+
 </br>
 
-# Controllers Used
+2. **maze_launch.launch:** Only spawn the maze inside simulation, needs Gazebo launch before using it.
+ 
+    - **Arguments to set Maze spawn**
+ 
+       - **`maze_name:`** specifie wich maze will be loaded and its name. 
+
+</br>
+
+# **Controllers Used**
 
 **doogie_gazebo** uses **gazebo_ros_control** to provide simulation some of the default controllers used by ROS. The **ros_controllers** used in this simulation are:
 
@@ -123,7 +133,7 @@ Futhermore, this package also uses some sensors plugins from **gazebo_plugins**.
 
 **gazebo_ros_control** and each of the **gazebo_plugins** used here in the simulation was previously declared in Doogie Mouse's URDF, check [doogie_description], and defined in [doogie_control].
 
-# Topics
+# **Topics**
 
 - **`/move_base_controller/cmd_vel`** : [geometry_msgs/Twist]
 

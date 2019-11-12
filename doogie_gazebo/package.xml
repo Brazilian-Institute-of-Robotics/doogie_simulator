@@ -1,20 +1,22 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>doogie_gazebo</name>
-    <version>0.8.7</version>
-    <description>This package provides launchfiles to use Doogie in gazebo</description>
+  <name>doogie_gazebo</name>
+  <version>0.8.7</version>
+  <description>This package provides launchfiles to use Doogie in gazebo</description>
 
-    <maintainer email="caioaamaral@gmail.com">Caio Amaral</maintainer>
-    <author email="caioaamaral@gmail.com">Caio Amaral</author>
+  <maintainer email="caioaamaral@gmail.com">Caio Amaral</maintainer>
+  <author email="caioaamaral@gmail.com">Caio Amaral</author>
 
-    <url type="repository">https://github.com/Brazilian-Institute-of-Robotics/doogie_gazebo</url>
+  <url type="repository">https://github.com/Brazilian-Institute-of-Robotics/doogie_gazebo</url>
+  <license>GPLv3</license>
 
-    <license>GPLv3</license>
-    <buildtool_depend>catkin</buildtool_depend>
-
-    <exec_depend>gazebo_ros</exec_depend>
-    <exec_depend>doogie_description</exec_depend>
-    <exec_depend>doogie_control</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+	
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>doogie_description</exec_depend>
+  <exec_depend>doogie_control</exec_depend>
 
 
 </package>

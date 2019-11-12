@@ -83,7 +83,6 @@ Don't forget to source your workspace before using it.
     
     source devel/setup.bash
 
-</br>
 
 ## Example of Usage
 

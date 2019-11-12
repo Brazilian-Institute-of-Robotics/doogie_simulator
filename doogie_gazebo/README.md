@@ -8,7 +8,7 @@ This ROS catkin package provides all launchfiles required in order to simulate *
 Affiliation: [BIR - Brazilian Institute of Robotics]<br />
 Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
-## Supported Versions
+### Supported Versions
 
 The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.04 using **Gazebo 7.0.0** (the one that comes with [ROS] Kinetic Desktop-full installation). 
 
@@ -28,7 +28,7 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 
 # **Table of Contents**
 - [**doogie_gazebo**](#doogiegazebo)
-  - [Supported Versions](#supported-versions)
+    - [Supported Versions](#supported-versions)
   - [Dependencies](#dependencies)
 - [**Table of Contents**](#table-of-contents)
     - [Publications](#publications)

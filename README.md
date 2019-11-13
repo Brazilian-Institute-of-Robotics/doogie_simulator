@@ -65,7 +65,7 @@ First, lets create a catkin workspace.
 
 **doogie_simulator** depends on [doogie_base] stack. So let's clone it inside our workspace source and install it.
 
-	cd ~/doogie_workspace/src
+	cd ~/doogie_ws/src
 	git clone http://github.com/doogie-mouse/doogie_base.git
     cd ..
     rosdep install --from-paths src --ignore-src -r -y
@@ -76,7 +76,7 @@ Then, clone **doogie_simulator** also in your workspace source.
 
 Now, just build your catkin workspace.
 
-    cd ~/doogie_workspace
+    cd ~/doogie_ws
     catkin_make
 
 Don't forget to source your workspace before using it.

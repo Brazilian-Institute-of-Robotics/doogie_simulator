@@ -35,9 +35,7 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 - [**Launch files**](#launch-files)
 - [**Controllers Used**](#controllers-used)
 - [**Topics**](#topics)
-- [Services](#services)
-      - [Parameters](#parameters)
-    - [NODE_B_NAME](#nodebname)
+- [Gazebo Communication](#gazebo-communication)
 
 </br>
 
@@ -136,38 +134,28 @@ Futhermore, this package also uses some sensors plugins from **gazebo_plugins**.
 
 # **Topics**
 
-- **`/move_base_controller/cmd_vel`** : [geometry_msgs/Twist]
+- **`/move_base_controller/cmd_vel`** : ([geometry_msgs/Twist](https://docs.ros.org/kinetic/api/geometry_msgs/html/msg/Twist.html))
 
 	Publish linear (m/s) and angular (rad/s) Doogie's velocity, by default it's using diff_drive_controller. **This is the one used to move Doogie Mouse in Gazebo by controlling its velocity.**
 
-- **`/joint_states`** : [sensor_msgs/JoinState]
+-**`/move_base_controller/odom`** : ([nav_msgs/Odometry](https://docs.ros.org/kinetic/api/nav_msgs/html/msg/Odometry.html))
+
+   Publish Doogie's current estimated position and velocity.
+
+- **`/joint_states`** : ([sensor_msgs/JoinState](https://docs.ros.org/kinetic/api/sensor_msgs/html/msg/JointState.html))
   
   Publish Doogie's wheels position (rad) and velocity (rad/s). **This is the one used to read Doogie Mouse velocity data.**
 
 
-# Services
+# Gazebo Communication
 
-* **`get_average`** ([std_srvs/Trigger])
+**gazebo_ros** provides its own communication interface, for more details you may refer to:
 
-	Returns information about the current average. For example, you can trigger the computation from the console with
+[Gazebo Topics](http://gazebosim.org/tutorials?tut=ros_comm&cat=connect_ros#GazeboSubscribedTopics)
 
-		rosservice call /ros_package_template/get_average
+[Gazebo Parameters](http://gazebosim.org/tutorials?tut=ros_comm&cat=connect_ros#GazeboPublishedParameters)
 
-
-#### Parameters
-
-* **`subscriber_topic`** (string, default: "/temperature")
-
-	The name of the input topic.
-
-* **`cache_size`** (int, default: 200, min: 0, max: 1000)
-
-	The size of the cache.
-
-
-### NODE_B_NAME
-
-...
+[Gazebo Services](http://gazebosim.org/tutorials?tut=ros_comm&cat=connect_ros#Services:Createanddestroymodelsinsimulation)
 
 
 [doogie_description]:  https://github.com/Brazilian-Institute-of-Robotics/doogie_description

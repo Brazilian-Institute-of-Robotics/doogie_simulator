@@ -26,7 +26,6 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 - [**Table of Contents**](#table-of-contents)
 - [**Simulators Supported**](#simulators-supported)
     - [Gazebo](#gazebo)
-- [**Installation**](#installation)
     - [1. Installation from Packages:](#1-installation-from-packages)
     - [2. Building from Source:](#2-building-from-source)
   - [Example of Usage](#example-of-usage)
@@ -43,7 +42,7 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 
 </br>
 
-# **Installation**
+<!-- # **Installation**
 
 ### 1. Installation from Packages:
 
@@ -52,7 +51,7 @@ TODO
     sudo apt-get install ros-indigo-...
 
 
-or you could also build this repository from source.
+or you could also build this repository from source. -->
 
 ### 2. Building from Source:
 
@@ -62,13 +61,14 @@ Attention, if you haven't installed [ROS] yet, please check [Ubuntu install of R
 
 First, lets create a catkin workspace.
 
-    mkdir -p ~/catkin_ws/src
+    mkdir -p ~/doogie_ws/src
 
 **doogie_simulator** depends on [doogie_base] stack. So let's clone it inside our workspace source and install it.
 
-	cd ~/catkin_workspace/src
+	cd ~/doogie_workspace/src
 	git clone http://github.com/doogie-mouse/doogie_base.git
-    rosdep install --from-paths src -ignore-src -r -y
+    cd ..
+    rosdep install --from-paths src --ignore-src -r -y
 
 Then, clone **doogie_simulator** also in your workspace source.
         
@@ -76,8 +76,8 @@ Then, clone **doogie_simulator** also in your workspace source.
 
 Now, just build your catkin workspace.
 
-    cd ~/catkin_ws
-    catkin build
+    cd ~/doogie_workspace
+    catkin_make
 
 Don't forget to source your workspace before using it.
     

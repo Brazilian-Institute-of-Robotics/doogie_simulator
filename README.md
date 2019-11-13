@@ -95,6 +95,11 @@ Just launch the robot.launch
 </br>
 
 # **Purpose of the Project**
+
+Doogie Mouse platform was originally developed in 2019 as an undergraduate thesis (Theoprax methodoly) at Centro Universitário SENAI CIMATEC in partnership with Brazillian Institute of Robotics, for teaching ṕrinciples of artificial intelligence using high level framework for writing and reusing robot software.
+
+It's a [open source project](/LICENSE) and expects modifications and contributions from it's users. 
+
 </br>
 
 # **License**

@@ -104,7 +104,7 @@ It's a [open source project](/LICENSE) and expects modifications and contributio
 
 # **License**
 
-Doogie Mouse Simulator source code is released under a [GPLv3](/LICENSE).
+Doogie Mouse Simulator source code is released under a [Apache 2.0](/LICENSE).
 
 </br>
 

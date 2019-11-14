@@ -4,6 +4,7 @@
   <version>0.8.7</version>
   <description>Metapackage for Doogie Mouse simulation</description>
 
+  <maintainer email="mateusmenezes95@gmail.com">Mateus Menezes</maintainer>
   <maintainer email="caioaamaral@gmail.com">Caio Amaral</maintainer>
   <author email="caioaamaral@gmail.com">Caio Amaral</author>
 

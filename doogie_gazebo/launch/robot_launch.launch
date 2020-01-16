@@ -16,13 +16,13 @@
 
   <arg name="maze_name" default="minus"/> 
 
-  <arg name="x" default="0.0"/>
-  <arg name="y" default="0.0"/>
+  <arg name="x" default="-0.87"/>
+  <arg name="y" default="-0.87"/>
   <arg name="z" default="0.02"/>
 
   <arg name="R" default="0.0"/> 
   <arg name="P" default="0.0"/>
-  <arg name="Y" default="0.0"/>
+  <arg name="Y" default="1.57"/>
 
   <!-- Launch gazebo world: default is empty_world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -53,6 +53,10 @@
       -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
 
     <include file="$(find doogie_control)/launch/robot_control.launch">
+      <arg name="ns" value="$(arg robot_name)"/>
+    </include>
+
+    <include file="$(find doogie_navigation)/launch/move_base.launch">
       <arg name="ns" value="$(arg robot_name)"/>
     </include>
   

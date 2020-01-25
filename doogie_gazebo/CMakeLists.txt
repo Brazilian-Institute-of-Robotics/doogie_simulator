@@ -26,7 +26,7 @@ include_directories(
 )
 
 add_executable(ir_sensor_data_acc_node
-  src/main.cpp  
+  src/ir_sensor_data_acc_node.cpp  
   src/ir_sensor_data_acc.cpp
 )
 target_link_libraries(ir_sensor_data_acc_node

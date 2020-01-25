@@ -59,6 +59,10 @@
     <include file="$(find doogie_navigation)/launch/move_base.launch">
       <arg name="ns" value="$(arg robot_name)"/>
     </include>
+
+    <include file="$(find doogie_perception)/launch/doogie_perception.launch">
+      <arg name="ns" value="$(arg robot_name)"/>
+    </include>
   
     <node name="ir_sensor_data_acc_node" pkg="doogie_gazebo" type="ir_sensor_data_acc_node" output="screen">
       <rosparam file="$(find doogie_gazebo)/config/sensor_commons.yaml" command="load"/>

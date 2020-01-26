@@ -68,6 +68,7 @@
       <rosparam file="$(find doogie_gazebo)/config/sensor_commons.yaml" command="load"/>
     </node>
     
+    <rosparam file="$(find doogie_description)/config/mazes.yaml" command="load"/>
   </group>
 
 </launch>

@@ -1,0 +1,4 @@
+maze_name: minus # Current active maze
+map_resolution: 0.01 # Resolution of occupancy grid in meters
+pivo_dim: 0.012 # Dimension of maze wall pivô in meters
+pub_rate: 10 # Frequency to publish the map in hertz

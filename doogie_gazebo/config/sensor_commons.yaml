@@ -1,0 +1,7 @@
+ir_sensor:
+  names:
+  - left
+  - front_left
+  - front_right
+  - right
+  

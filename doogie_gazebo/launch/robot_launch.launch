@@ -47,6 +47,8 @@
     <!--Note that because of 'group ns' all doogie params will be prefixed by
     /doogie (e.g., /doogie/robot_description) -->
 
+    <rosparam file="$(find doogie_description)/config/mazes.yaml" command="load"/>
+
     <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" output="screen"
       args="-urdf -param /$(arg robot_param) -model $(arg robot_name) 
       -x $(arg x) -y $(arg y) -z $(arg z) 
@@ -68,7 +70,9 @@
       <rosparam file="$(find doogie_gazebo)/config/sensor_commons.yaml" command="load"/>
     </node>
     
-    <rosparam file="$(find doogie_description)/config/mazes.yaml" command="load"/>
+    <include file="$(find doogie_rviz)/launch/maze_map.launch">
+      <arg name="ns" value="$(arg robot_name)"/>
+    </include>
   </group>
 
 </launch>

@@ -22,12 +22,13 @@ class MazeMap {
   inline void drawEastWall(uint8_t row, uint8_t column);
   inline void drawWestWall(uint8_t row, uint8_t column);
   void drawWalls(uint8_t row, uint8_t column, doogie_msgs::MazeCell cell_walls);
-  void updateMap();
+  void publishMap();
   void run();
  
  private:
   void loadParameters();
   void drawWall(grid_map::Position start, grid_map::Position end);
+  grid_map::Position computeStartPoint(uint8_t row, uint8_t column);
   void doogiePositionCallback(const doogie_msgs::DoogiePositionConstPtr& doogie_position);
   void mazeObstacleMatrixCallback(const doogie_msgs::MazeCellMultiArrayConstPtr& maze_obstacle_matrix);
 
@@ -45,7 +46,8 @@ class MazeMap {
   uint8_t number_of_rows_;
   uint8_t number_of_columns_;
   float cell_size_;
-  float pivo_size_;
+  float pivo_dim_;
+  float wall_size_;
   float pub_rate_;
   float map_resolution_;
 

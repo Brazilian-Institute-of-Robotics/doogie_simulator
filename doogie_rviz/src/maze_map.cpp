@@ -132,7 +132,6 @@ void MazeMap::doogiePositionCallback(const doogie_msgs::DoogiePositionConstPtr& 
 void MazeMap::mazeObstacleMatrixCallback(const doogie_msgs::MazeCellMultiArrayConstPtr& maze_obstacle_matrix) {
   cell_walls_ = MazeMatrixHandle::getMazeMatrixCell(*maze_obstacle_matrix,
                                                     doogie_position_.row, doogie_position_.column);
-  ROS_INFO("Position received = %i x %i", doogie_position_.row, doogie_position_.column);
   is_to_update_map_ = true;
 }
 

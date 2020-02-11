@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+ 
+  <arg name="ns" default="/"/>
+  <arg name="rvizconfig" default="$(find doogie_rviz)/rviz/maze_map.rviz" />
+ 
+  <node name="maze_map_node" pkg="doogie_rviz" type="maze_map_node" output="screen">
+    <rosparam file="$(find doogie_rviz)/config/maze_map.yaml" command="load"/>
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>

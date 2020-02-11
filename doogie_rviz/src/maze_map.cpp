@@ -13,7 +13,7 @@ MazeMap::MazeMap()
   : maze_map_({"ground"})
   , is_to_update_map_(false) {
   maze_map_pub_ = nh_.advertise<nav_msgs::OccupancyGrid>("maze_map", 1);
-  maze_obstacle_matrix_sub_ = nh_.subscribe("maze_obstacle_matrix", 1, &MazeMap::mazeObstacleMatrixCallback, this);
+  maze_obstacle_matrix_sub_ = nh_.subscribe("maze_matrix", 1, &MazeMap::mazeObstacleMatrixCallback, this);
   doogie_position_sub_ = nh_.subscribe("doogie_position", 1, &MazeMap::doogiePositionCallback, this);
 }
 

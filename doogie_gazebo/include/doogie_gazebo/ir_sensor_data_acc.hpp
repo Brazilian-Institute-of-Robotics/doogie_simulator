@@ -11,7 +11,7 @@
 #include <message_filters/sync_policies/approximate_time.h>
 
 #include <sensor_msgs/Range.h>
-#include "doogie_msgs/DoogiePosition.h"
+#include "doogie_msgs/DoogiePose.h"
 
 namespace doogie_gazebo {
 
@@ -65,7 +65,7 @@ class IRSensorDataAcc {
    * 
    * @param msg Not used in this application.
    */
-  void UpdateMatrixCallback(const doogie_msgs::DoogiePositionConstPtr& msg);
+  void UpdateMatrixCallback(const doogie_msgs::DoogiePoseConstPtr& msg);
 
   /** Global NodeHandle to publishers and subsribers. */
   ros::NodeHandle nh_;

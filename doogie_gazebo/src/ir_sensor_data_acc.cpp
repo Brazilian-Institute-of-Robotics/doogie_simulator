@@ -37,7 +37,7 @@ void IRSensorDataAcc::init() {
 
   ir_sensors_sync_.registerCallback(boost::bind(&IRSensorDataAcc::accCallback, this, _1, _2, _3, _4));
   ir_sensors_pub_ = nh_.advertise<doogie_msgs::WallDistances>("wall_distances", 1);
-  update_matrix_sub_ = nh_.subscribe("doogie_position", 1, &IRSensorDataAcc::UpdateMatrixCallback, this);
+  update_matrix_sub_ = nh_.subscribe("doogie_pose", 1, &IRSensorDataAcc::UpdateMatrixCallback, this);
 }
 
 void IRSensorDataAcc::run() {
@@ -63,7 +63,7 @@ void IRSensorDataAcc::accCallback(const sensor_msgs::RangeConstPtr& left_ir,
   is_to_publish_wall_distances_ = false;
 }
 
-void IRSensorDataAcc::UpdateMatrixCallback(const doogie_msgs::DoogiePositionConstPtr& msg) {
+void IRSensorDataAcc::UpdateMatrixCallback(const doogie_msgs::DoogiePoseConstPtr& msg) {
   is_to_publish_wall_distances_ = true;
 }
 

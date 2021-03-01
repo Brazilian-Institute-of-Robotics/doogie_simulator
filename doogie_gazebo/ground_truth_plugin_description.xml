@@ -1,0 +1,9 @@
+<library path="lib/libgazebo_ground_truth">
+
+  <class name="doogie_gazebo/GroundTruth" type="doogie_gazebo::GroundTruth" base_class_type="doogie_localization::BaseLocalization">
+    <description>
+      A gazebo ground truth implementation using nav_msgs/Odom msg.
+    </description>
+  </class>
+  
+</library>

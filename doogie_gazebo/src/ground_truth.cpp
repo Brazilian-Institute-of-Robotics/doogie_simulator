@@ -25,7 +25,7 @@ void GroundTruth::odomCallBack(const nav_msgs::OdometryConstPtr &odometry_msg) {
   current_velocity_ = odometry_msg->twist.twist;
 
   tf_buffer_.transform(current_pose_, current_pose_, odom_frame_);
-  ROS_INFO_THROTTLE(1.0, "Doogie Position(x:%f y:%f z:%f)\n", 
+  ROS_DEBUG_THROTTLE(1.0, "Doogie Position(x:%f y:%f z:%f)\n", 
             current_pose_.pose.position.x,
             current_pose_.pose.position.y,
             current_pose_.pose.position.z);

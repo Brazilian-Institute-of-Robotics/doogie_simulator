@@ -17,6 +17,8 @@
   <depend>nav_msgs</depend>
   <depend>doogie_msgs</depend>
   <depend>doogie_core</depend>
+  
+  <exec_depend>rviz</exec_depend>
 
   <export>
   </export>

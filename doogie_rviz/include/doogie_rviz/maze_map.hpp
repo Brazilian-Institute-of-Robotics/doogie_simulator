@@ -9,7 +9,7 @@
 
 #include "doogie_msgs/MazeCellMultiArray.h"
 #include "doogie_msgs/MazeCell.h"
-#include "doogie_msgs/DoogiePosition.h"
+#include "doogie_msgs/DoogiePose.h"
 
 namespace doogie_rviz {
 
@@ -29,16 +29,16 @@ class MazeMap {
   void loadParameters();
   void drawWall(grid_map::Position start, grid_map::Position end);
   grid_map::Position computeStartPoint(uint8_t row, uint8_t column);
-  void doogiePositionCallback(const doogie_msgs::DoogiePositionConstPtr& doogie_position);
+  void doogiePoseCallback(const doogie_msgs::DoogiePoseConstPtr& doogie_pose);
   void mazeObstacleMatrixCallback(const doogie_msgs::MazeCellMultiArrayConstPtr& maze_obstacle_matrix);
 
   grid_map::GridMap maze_map_;
   ros::NodeHandle nh_;
   ros::Publisher maze_map_pub_;
-  ros::Subscriber doogie_position_sub_;
+  ros::Subscriber doogie_pose_sub_;
   ros::Subscriber maze_obstacle_matrix_sub_;
 
-  doogie_msgs::DoogiePosition doogie_position_;
+  doogie_msgs::DoogiePose doogie_pose_;
   doogie_msgs::MazeCell cell_walls_;
   nav_msgs::OccupancyGrid maze_map_grid_;
 

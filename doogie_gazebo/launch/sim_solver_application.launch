@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="namespace" default="doogie"/>
+
+  <include file="$(find doogie_gazebo)/launch/sim_move_base_interface.launch">
+    <arg name="namespace" value="$(arg namespace)"/>
+  </include>
+  
+  <group ns="$(arg namespace)">
+    <!--Note: all names [ such as nodes, topics, params...] called inside '<group ns>' will be prefixed by
+    /doogie (e.g., /doogie/robot_description) -->
+
+    <include file="$(find doogie_navigation)/launch/maze_solver.launch"/>
+
+  </group>
+
+</launch>

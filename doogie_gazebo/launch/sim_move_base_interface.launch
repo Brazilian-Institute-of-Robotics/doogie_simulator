@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="namespace" default="doogie"/>
+
+  <include file="$(find doogie_gazebo)/launch/robot_launch.launch">
+    <arg name="namespace" value="$(arg namespace)"/>
+  </include>
+
+  <group ns="$(arg namespace)">
+    <!--Note: all names [ such as nodes, topics, params...] called inside '<group ns>' will be prefixed by
+    /doogie (e.g., /doogie/robot_description) -->
+
+    <!-- doogie_move_in_maze controller -->
+    <include file="$(find doogie_navigation)/launch/move_in_maze.launch"/>
+
+    <!-- doogie_perception -->
+    <include file="$(find doogie_perception)/launch/doogie_perception.launch">
+      <arg name="ns" value="$(arg namespace)"/>
+    </include>
+
+    <!-- wall_distances publisher -->
+    <node name="ir_sensor_data_acc_node" pkg="doogie_gazebo" type="ir_sensor_data_acc_node" output="screen">
+      <rosparam file="$(find doogie_gazebo)/config/sensor_commons.yaml" command="load"/>
+    </node>
+    
+    <!-- rviz occupancy grid -->
+    <include file="$(find doogie_rviz)/launch/maze_map.launch">
+      <arg name="ns" value="$(arg namespace)"/>
+    </include>
+
+  </group>
+
+</launch>

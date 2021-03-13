@@ -14,7 +14,7 @@ MazeMap::MazeMap()
   , is_to_update_map_(false) {
   maze_map_pub_ = nh_.advertise<nav_msgs::OccupancyGrid>("maze_map", 1);
   maze_obstacle_matrix_sub_ = nh_.subscribe("maze_matrix", 1, &MazeMap::mazeObstacleMatrixCallback, this);
-  doogie_position_sub_ = nh_.subscribe("doogie_position", 1, &MazeMap::doogiePositionCallback, this);
+  doogie_pose_sub_ = nh_.subscribe("doogie_pose", 1, &MazeMap::doogiePoseCallback, this);
 }
 
 void MazeMap::loadParameters() {
@@ -107,7 +107,7 @@ void MazeMap::drawWalls(uint8_t row, uint8_t column, doogie_msgs::MazeCell cell_
 
 void MazeMap::publishMap() {
   if (is_to_update_map_) {
-    this->drawWalls(doogie_position_.row, doogie_position_.column, cell_walls_);
+    this->drawWalls(doogie_pose_.position.row, doogie_pose_.position.column, cell_walls_);
     is_to_update_map_ = false;
   }
 
@@ -125,13 +125,13 @@ void MazeMap::run() {
   }
 }
 
-void MazeMap::doogiePositionCallback(const doogie_msgs::DoogiePositionConstPtr& doogie_position) {
-  this->doogie_position_ = *doogie_position;
+void MazeMap::doogiePoseCallback(const doogie_msgs::DoogiePoseConstPtr& doogie_pose) {
+  this->doogie_pose_ = *doogie_pose;
 }
 
 void MazeMap::mazeObstacleMatrixCallback(const doogie_msgs::MazeCellMultiArrayConstPtr& maze_obstacle_matrix) {
   cell_walls_ = MazeMatrixHandle::getMazeMatrixCell(*maze_obstacle_matrix,
-                                                    doogie_position_.row, doogie_position_.column);
+                                                    doogie_pose_.position.row, doogie_pose_.position.column);
   is_to_update_map_ = true;
 }
 

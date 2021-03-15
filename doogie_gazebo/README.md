@@ -27,7 +27,7 @@ The **doogie_gazebo** package has been tested under [ROS] Kinetic and Ubuntu 16.
 - [doogie_control] (package with doogie ros controllers);
 
 # **Table of Contents**
-- [**doogie_gazebo**](#doogiegazebo)
+- [**doogie_gazebo**](#doogie_gazebo)
     - [Supported Versions](#supported-versions)
   - [Dependencies](#dependencies)
 - [**Table of Contents**](#table-of-contents)
@@ -47,13 +47,13 @@ If you use this work in an academic context, please cite the following publicati
 APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA
 ARTIFICIAL EM ROBÓTICA MÓVEL**. V SIINTEC International Symposium on Innovation and Technology, 2019. ([PDF](/doogie_gazebo/docs/Paper_SIINTEC_V.pdf))
 
-        @inproceedings{Doogie2019,
-            author = {Amaral, C. and Santos Meneses, M. },
-            booktitle = {V SIINTEC International Symposium on Innovation and Technology},
-            title = {{DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA ARTIFICIAL EM ROBÓTICA MÓVEL}},
-            publisher = {CIMATEC},
-            year = {2019}
-        }
+      @inproceedings{Doogie2019,
+         author = {Amaral, C. and Santos Meneses, M. },
+         booktitle = {V SIINTEC International Symposium on Innovation and Technology},
+         title = {{DOOGIE MOUSE: UMA PLATAFORMA OPEN SOURCE PARA APLICAÇÃO DE ALGORITMOS INICIAIS DE INTELIGÊNCIA ARTIFICIAL EM ROBÓTICA MÓVEL}},
+         publisher = {CIMATEC},
+         year = {2019}
+      }
 
 ____
 
@@ -61,53 +61,53 @@ ____
 
 1. **robot_launch.launch:** spawn Doogie Mouse at Gazebo empty.world
 
-     - **Arguments to set Doogie Mouse spawn**
+  - **Arguments to set Doogie Mouse spawn**
 
-       - **`robot_name:`** specifie a nickname for Doogie Mouse when in gazebo.
-      
-          - Default: `doogie`
-  
-       - **`x:`** set x position coordinate where the robot will be spawned.
-          - Default:`0.0`
-       - **`y:`** set y position coordinate where the robot will be spawned.
-          - Default:`0.0`
-       - **`z:`** set z position coordinate where the robot will be spawned.
-          - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
+    - **`robot_name:`** specifie a nickname for Doogie Mouse when in gazebo.
+   
+       - Default: `doogie`
 
-     - **Arguments to set Maze spawn**
-       - **`maze_name:`**specifie wich maze will be loaded and its name.
+    - **`x:`** set x position coordinate where the robot will be spawned.
+       - Default:`0.0`
+    - **`y:`** set y position coordinate where the robot will be spawned.
+       - Default:`0.0`
+    - **`z:`** set z position coordinate where the robot will be spawned.
+       - Default: `0.02` --> <span style="color:red">**This will probably change to '0.0' in final version**</span>
 
-     - **Arguments to set Gazebo World**
+  - **Arguments to set Maze spawn**
+    - **`maze_name:`**specifie wich maze will be loaded and its name.
 
-       - **`paused:`** start Gazebo in a paused state. 
+  - **Arguments to set Gazebo World**
 
-         - Default: `false`.
-  
-       - **`use_sim_time:`** tells if nodes will use time published at /clock.
+    - **`paused:`** start Gazebo in a paused state. 
 
-          - Default: `true` 
+      - Default: `false`.
 
-       - **`gui:`** load Gazebo user interface display.
-    
-          - Default: `true`
+    - **`use_sim_time:`** tells if nodes will use time published at /clock.
 
-       - **`debug:`** start Gazebo Server (gzserver) at debug mode using gdb.
+       - Default: `true` 
 
-          - Default: `false`
+    - **`gui:`** load Gazebo user interface display.
+ 
+       - Default: `true`
 
-       - **`physics:`** specifie wich physics engine will be used by Gazebo.
+    - **`debug:`** start Gazebo Server (gzserver) at debug mode using gdb.
 
-          - Default: `ode`
+       - Default: `false`
 
-       - **`verbose:`** run gzserver and Gazebo Client (gzclient)in verbose mode (i.e, printing errors and warnings to the terminal).
-  
-          - Default: `false`
+    - **`physics:`** specifie wich physics engine will be used by Gazebo.
 
-       - **`world_name:`** tells gazebo which world will be loaded.
-    
-          - Default: `worlds/empty_world` 
-    
-        **Note:** the **world_name** path is with respect to **GAZEBO_RESOURCE_PATH** environmental variable.
+       - Default: `ode`
+
+    - **`verbose:`** run gzserver and Gazebo Client (gzclient)in verbose mode (i.e, printing errors and warnings to the terminal).
+
+       - Default: `false`
+
+    - **`world_name:`** tells gazebo which world will be loaded.
+ 
+       - Default: `worlds/empty_world` 
+ 
+     **Note:** the **world_name** path is with respect to **GAZEBO_RESOURCE_PATH** environmental variable.
 
 </br>
 

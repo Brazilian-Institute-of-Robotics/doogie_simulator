@@ -15,12 +15,10 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 <!-- [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/) TODO -->
 
 ### Dependencies 
-- [doogie_base] : ROS packages stack with all common packages for working with Doogie Mouse
-
-</br>
+- [doogie_base] : ROS metapackage with all common packages for working with Doogie Mouse
 
 # **Table of Contents**
-- [**doogie_simulator**](#doogiesimulator)
+- [**doogie_simulator**](#doogie_simulator)
     - [Supported Versions](#supported-versions)
     - [Dependencies](#dependencies)
 - [**Table of Contents**](#table-of-contents)
@@ -39,8 +37,6 @@ Maintainer: Caio Amaral, caioaamaral@gmail.com**
 ### Gazebo
 
 - [doogie_gazebo] : ROS package with all launchfiles required to simulate Doogie Mouse in Gazebo
-
-</br>
 
 # **Installation**
 
@@ -63,7 +59,7 @@ First, lets create a catkin workspace.
 
     mkdir -p ~/doogie_ws/src
 
-**doogie_simulator** depends on [doogie_base] stack. So let's clone it inside our workspace source and install it.
+**doogie_simulator** depends on [doogie_base] metapackage. So let's clone it inside our workspace source and install it.
 
 	cd ~/doogie_ws/src
 	git clone http://github.com/doogie-mouse/doogie_base.git
@@ -88,11 +84,49 @@ Don't forget to source your workspace before using it.
 
 ### Launch Doogie Mouse at Gazebo:
 
-Just launch the robot.launch
+There are two launch files in simulation. The first one is to run the solver application. The second launch the simulation to send manual goals to the robot.
 
-	roslaunch doogie_gazebo robot_launch.launch
+To launch de solver application, run
 
-</br>
+	roslaunch doogie_gazebo sim_solver_application.launch
+
+and to start the simulation, publish the actual pose of the robot in the maze
+```sh
+rostopic pub -1 /doogie/doogie_pose doogie_msgs/DoogiePose "orientation:
+  direction: 1
+position:
+  row: 0
+  column: 0" 
+```
+
+To launch the move base interface, run
+```sh
+roslaunch doogie_gazebo sim_move_base_interface.launch
+```
+
+To fill the first cell wall on rviz maze visualization, repeat the step above to publish the initial pose of the robot. Thus to move the robot, just send manually the goals (see [DoogieMove.action] to understand the goal message)
+```sh
+rostopic pub /doogie/move_base_action_server/goal doogie_msgs/DoogieMoveAcnGoal "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+goal_id:
+  stamp:
+    secs: 0
+    nsecs: 0
+  id: ''
+goal:
+  direction: 0
+  cells: 1
+  turns: 0"
+```
+
+It is also possible send the goals by the axclient interface
+```sh
+rosrun actionlib axclient.py /doogie/move_base_action_server/goal
+```
 
 # **Purpose of the Project**
 
@@ -100,13 +134,9 @@ Doogie Mouse platform was originally developed in 2019 as an undergraduate thesi
 
 It's a [open source project](/LICENSE) and expects modifications and contributions from it's users. 
 
-</br>
-
 # **License**
 
 Doogie Mouse Simulator source code is released under a [Apache 2.0](/LICENSE).
-
-</br>
 
 # **Bugs & Feature Requests**
 
@@ -119,3 +149,4 @@ Please report bugs and request features using the [Issue Tracker].
 [doogie_gazebo/Tutorials]: http://github.com/doogie-mouse/doogie_simulator/wiki/doogie_gazebo
 [Issue Tracker]: http://github.com/doogie-mouse/doogie_simulator/issues
 [ROS]: http://www.ros.org
+[DoogieMove.action]: https://github.com/Brazilian-Institute-of-Robotics/doogie_base/blob/master/doogie_msgs/action/DoogieMove.action
